@@ -1,5 +1,7 @@
 # Quiz App
 
+![Quiz App Banner](banner.png)
+
 The Quiz App is a Python application with a graphical user interface (GUI) that allows users to take a timed quiz on a specified subject. The app presents multiple-choice questions, tracks the user's answers, and provides a score report at the end of the quiz.
 
 ## Features
@@ -53,28 +55,6 @@ To customize the quiz questions and subject:
 
 - `gui.py`: Contains the `QuizApp` class responsible for the GUI and quiz functionality.
 - `main.py`: Contains the `Quiz` class that manages the quiz questions and subject.
-
-## Adding a Photo
-
-To add a photo to the start screen of the Quiz App:
-
-1. Save your desired image file (e.g., "quiz_image.png") in the same directory as `gui.py`.
-
-2. In the `start_screen` method of the `QuizApp` class in `gui.py`, add:
-
-   ```python
-   self.photo = tk.PhotoImage(file="quiz_image.png")
-   self.photo_label = tk.Label(self.root, image=self.photo, bg="#2C3E50") 
-   self.photo_label.pack(pady=20)
-   ```
-
-3. In the `clear_widgets` method, add:
-
-   ```python
-   self.photo_label.destroy()
-   ```
-
-4. Adjust the image size and placement as needed by modifying the `file` parameter and the `pady` value in the `photo_label` configuration.
 
 ## License
 
